@@ -1,0 +1,6 @@
+#define GTK_printf(fmt, args...) do{\
+    if(TRUE == LOG_ENABLE){\
+    printf("GTK_printf:%s, %d: " fmt "\n", __func__, __LINE__, ##args);\
+    }else{\
+    ;}\
+}while(0)
